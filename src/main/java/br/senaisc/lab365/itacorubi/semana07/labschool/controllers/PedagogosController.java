@@ -99,7 +99,7 @@ public class PedagogosController {
     ) {
         boolean isPedagogoFound = pedagogosRepository.existsById(id);
 
-        if (!isPedagogoModel) {
+        if (!isPedagogoFound) {
             return ResponseEntity
                     .status(HttpStatus.NOT_FOUND)
                     .body("Pedagogo não encontrado!");
